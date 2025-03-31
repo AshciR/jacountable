@@ -7,7 +7,7 @@ const CallToActionSection = () => {
         Explore the Facts
       </h2>
       <p className="text-slate mb-6 max-w-xl mx-auto">
-        Browse government promises and track scandals that shaped Jamaica's future
+        Browse government promises and track scandals that shaped Jamaica&apos;s future
       </p>
       <div className="flex flex-col sm:flex-row justify-center gap-4">
         <Link
