@@ -41,3 +41,4 @@ const CorruptionCard = ({
 );
 
 export {CorruptionCard}
+export type {CorruptionCardProps}
