@@ -3,11 +3,11 @@ import {Header} from "@/components/Header";
 import {CorruptionCard, CorruptionCardProps} from "@/components/CorruptionCard";
 import {Footer} from "@/components/Footer";
 import {TimelineItem, TimelineItemProps} from "@/components/TimelineItem";
+import {CorruptionStatus} from "@/components/CorruptionStatus";
 
 const CorruptionPage = () => (
   <main className="bg-[#F9FAFB] text-charcoal min-h-screen flex flex-col">
     <Header/>
-    {/*<CardView corruptionData={data}/>*/}
     <TimeLineView corruptionData={data}/>
     <Footer/>
   </main>
@@ -22,7 +22,7 @@ const TimeLineView = ({corruptionData}: TimeLineViewProps) => {
     <div className="flex-grow px-4 py-12 max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold text-center mb-8 text-primary">Corruption Timeline</h1>
 
-      {data
+      {corruptionData
         .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
         .map((item) => (
           <TimelineItem
@@ -43,6 +43,7 @@ type CardViewProps = {
   corruptionData: CorruptionCardProps[]
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CardView = ({corruptionData}: CardViewProps) => (
   <div className="flex-grow px-4 py-12">
     <h1 className="text-3xl font-bold text-center mb-8 text-primary">Corruption Timeline</h1>
@@ -54,7 +55,7 @@ const CardView = ({corruptionData}: CardViewProps) => (
           description={item.description}
           date={item.date}
           involved={item.involved}
-          status={item.status}
+          status={item.status as CorruptionStatus}
           source={item.source}
         />
       ))}

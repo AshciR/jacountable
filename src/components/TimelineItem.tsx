@@ -1,22 +1,24 @@
+import {CorruptionStatus} from "@/components/CorruptionStatus";
+
 type TimelineItemProps = {
   title: string;
   description: string;
   date: string;
   involved: string[];
-  status: string;
+  status: CorruptionStatus;
   source: string;
 }
 
 const statusStyles: Record<TimelineItemProps["status"], string> = {
-  Ongoing: "bg-accent text-black",
-  Investigated: "bg-green-600 text-white",
-  Ignored: "bg-red-600 text-white"
+  [CorruptionStatus.Ongoing]: "bg-accent text-black",
+  [CorruptionStatus.Investigated]: "bg-green-600 text-white",
+  [CorruptionStatus.Ignored]: "bg-red-600 text-white"
 };
 
 const dotColors: Record<TimelineItemProps["status"], string> = {
-  Ongoing: "bg-accent",
-  Investigated: "bg-green-600",
-  Ignored: "bg-red-600"
+  [CorruptionStatus.Ongoing]: "bg-accent",
+  [CorruptionStatus.Investigated]: "bg-green-600",
+  [CorruptionStatus.Ignored]: "bg-red-600"
 };
 
 

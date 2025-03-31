@@ -1,3 +1,5 @@
+import {CorruptionStatus} from "@/components/CorruptionStatus";
+
 type CorruptionCardProps = {
   title: string;
   description: string;
@@ -5,12 +7,6 @@ type CorruptionCardProps = {
   involved: string[];
   status: CorruptionStatus;
   source: string;
-}
-
-export enum CorruptionStatus {
-  Ongoing = "Ongoing",
-  Investigated = "Investigated",
-  Ignored = "Ignored"
 }
 
 const statusColors: Record<CorruptionCardProps["status"], string> = {
