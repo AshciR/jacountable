@@ -1,5 +1,3 @@
-
-
 import data from "@/data/corruption.json";
 import {Header} from "@/components/Header";
 import {CorruptionCard} from "@/components/CorruptionCard";

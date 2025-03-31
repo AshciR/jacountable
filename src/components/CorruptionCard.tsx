@@ -3,14 +3,20 @@ type CorruptionCardProps = {
   description: string;
   date: string;
   involved: string[];
-  status: "Ongoing" | "Investigated" | "Ignored";
+  status: CorruptionStatus;
   source: string;
 }
 
+export enum CorruptionStatus {
+  Ongoing = "Ongoing",
+  Investigated = "Investigated",
+  Ignored = "Ignored"
+}
+
 const statusColors: Record<CorruptionCardProps["status"], string> = {
-  Ongoing: "bg-accent text-black",
-  Investigated: "bg-green-600 text-white",
-  Ignored: "bg-red-600 text-white"
+  [CorruptionStatus.Ongoing]: "bg-accent text-black",
+  [CorruptionStatus.Investigated]: "bg-green-600 text-white",
+  [CorruptionStatus.Ignored]: "bg-red-600 text-white"
 };
 
 const CorruptionCard = ({
