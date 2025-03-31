@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "Petrojam Mismanagement Scandal",
+    "description": "Millions unaccounted for in government-run oil refinery.",
+    "date": "2018-06-15",
+    "involved": ["Petrojam", "Dr. Andrew Wheatley"],
+    "status": "Investigated",
+    "source": "https://example.com/report/petrojam"
+  },
+  {
+    "id": "2",
+    "title": "Education Ministry Fraud",
+    "description": "Misuse of funds intended for school infrastructure upgrades.",
+    "date": "2020-09-03",
+    "involved": ["Ministry of Education"],
+    "status": "Ongoing",
+    "source": "https://example.com/report/education"
+  }
+]
