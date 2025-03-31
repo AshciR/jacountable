@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Create 70,000 new jobs",
+    "category": "Employment",
+    "year": 2016,
+    "status": "Broken",
+    "source": "https://example.com/news/job-promise"
+  },
+  {
+    "id": "2",
+    "title": "Double access to public Wi-Fi",
+    "category": "Infrastructure",
+    "year": 2016,
+    "status": "In Progress",
+    "source": "https://example.com/news/wifi-promise"
+  },
+  {
+    "id": "3",
+    "title": "Provide free tertiary education",
+    "category": "Education",
+    "year": 2016,
+    "status": "Kept",
+    "source": "https://example.com/news/education-promise"
+  }
+]
