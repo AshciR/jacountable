@@ -1,6 +1,7 @@
 import {CorruptionStatus} from "@/components/CorruptionStatus";
 
 type TimelineItemProps = {
+  id: string
   title: string;
   description: string;
   date: string;

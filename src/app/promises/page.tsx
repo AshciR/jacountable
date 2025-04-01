@@ -1,5 +1,5 @@
 import promises from "@/data/promises.json";
-import {PromiseCard} from "@/components/PromiseCard";
+import {PromiseCard, PromiseStatus} from "@/components/PromiseCard";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
@@ -11,11 +11,12 @@ const PromisesPage = () => (
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {promises.map((item) => (
           <PromiseCard
+            id={item.id}
             key={item.id}
             title={item.title}
             category={item.category}
             year={item.year}
-            status={item.status}
+            status={item.status as PromiseStatus}
             source={item.source}
           />
         ))}
