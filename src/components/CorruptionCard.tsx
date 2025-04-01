@@ -1,16 +1,18 @@
+import {CorruptionStatus} from "@/components/CorruptionStatus";
+
 type CorruptionCardProps = {
   title: string;
   description: string;
   date: string;
   involved: string[];
-  status: "Ongoing" | "Investigated" | "Ignored";
+  status: CorruptionStatus;
   source: string;
 }
 
 const statusColors: Record<CorruptionCardProps["status"], string> = {
-  Ongoing: "bg-accent text-black",
-  Investigated: "bg-green-600 text-white",
-  Ignored: "bg-red-600 text-white"
+  [CorruptionStatus.Ongoing]: "bg-accent text-black",
+  [CorruptionStatus.Investigated]: "bg-green-600 text-white",
+  [CorruptionStatus.Ignored]: "bg-red-600 text-white"
 };
 
 const CorruptionCard = ({
@@ -41,3 +43,4 @@ const CorruptionCard = ({
 );
 
 export {CorruptionCard}
+export type {CorruptionCardProps}
