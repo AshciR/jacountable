@@ -5,13 +5,18 @@ import {Footer} from "@/components/Footer";
 import {TimelineItem, TimelineItemProps} from "@/components/TimelineItem";
 import {CorruptionStatus} from "@/components/CorruptionStatus";
 
-const CorruptionPage = () => (
-  <main className="bg-[#F9FAFB] text-charcoal min-h-screen flex flex-col">
-    <Header/>
-    <TimeLineView corruptionData={data}/>
-    <Footer/>
-  </main>
-);
+const CorruptionPage = () => {
+
+  const corruptionData = data as TimelineItemProps[]
+
+  return (
+    <main className="bg-[#F9FAFB] text-charcoal min-h-screen flex flex-col">
+      <Header/>
+      <TimeLineView corruptionData={corruptionData}/>
+      <Footer/>
+    </main>
+  );
+};
 
 type TimeLineViewProps = {
   corruptionData: TimelineItemProps[]
@@ -27,11 +32,12 @@ const TimeLineView = ({corruptionData}: TimeLineViewProps) => {
         .map((item) => (
           <TimelineItem
             key={item.id}
+            id={item.id}
             title={item.title}
             description={item.description}
             date={item.date}
             involved={item.involved}
-            status={item.status}
+            status={item.status as CorruptionStatus}
             source={item.source}
           />
         ))}
@@ -50,6 +56,7 @@ const CardView = ({corruptionData}: CardViewProps) => (
     <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {corruptionData.map((item) => (
         <CorruptionCard
+          id={item.id}
           key={item.id}
           title={item.title}
           description={item.description}

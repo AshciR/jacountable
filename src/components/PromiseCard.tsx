@@ -1,6 +1,7 @@
-type PromiseStatus = "Kept" | "Broken" | "In Progress" | "Unknown";
+export type PromiseStatus = "Kept" | "Broken" | "In Progress" | "Unknown";
 
 type PromiseCardProps = {
+  id: string;
   title: string;
   category: string;
   year: number;

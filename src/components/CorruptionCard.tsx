@@ -1,6 +1,7 @@
 import {CorruptionStatus} from "@/components/CorruptionStatus";
 
 type CorruptionCardProps = {
+  id: string;
   title: string;
   description: string;
   date: string;
